@@ -71,7 +71,11 @@ const hasTasks = taskCount?.toString() !== ‘0’;
 
 return (
 Your Accountability Dashboard
-Account: {account.address}
+
+    <p className="text-small">
+      Account: {account.address}
+    </p>
+  </div>
   <div className="accountability-content">
     {hasNoFunds && hasNoTasks && (
       <div>
@@ -95,7 +99,9 @@ Account: {account.address}
             placeholder="0.001 ETH"
             className="input"
             value={amount}
-            onChange={(e) => setAmount(Number(e.target.value))}
+            onChange={(e) =>
+              setAmount(Number(e.target.value))
+            }
           />
         </div>
         <TransactionButton
@@ -178,19 +184,25 @@ Account: {account.address}
                   key={taskWithIndex.originalIndex}
                   className="task-item"
                 >
-                  <span>{taskWithIndex.description}</span>
+                  <span>
+                    {taskWithIndex.description}
+                  </span>
                   <TransactionButton
                     transaction={() =>
                       prepareContractCall({
                         contract,
                         method: 'completeTask',
                         params: [
-                          BigInt(taskWithIndex.originalIndex),
+                          BigInt(
+                            taskWithIndex.originalIndex
+                          ),
                         ],
                       })
                     }
                     onTransactionConfirmed={() => {
-                      alert('Task completed successfully');
+                      alert(
+                        'Task completed successfully'
+                      );
                       console.log(
                         'Task at original index:',
                         taskWithIndex.originalIndex
