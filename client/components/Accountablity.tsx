@@ -1,15 +1,14 @@
-‘use client’;
+'use client';
 
-import React, { useEffect, useState } from ‘react’;
+import React, { useEffect, useState } from 'react';
 import {
-TransactionButton,
-useActiveAccount,
-useReadContract,
-} from ‘thirdweb/react’;
-import { prepareContractCall, toEther, toWei } from ‘thirdweb’;
-import StaticCont from ‘./StaticCont’;
-import { contract } from ‘../utils/contract’;
-
+  TransactionButton,
+  useActiveAccount,
+  useReadContract,
+} from 'thirdweb/react';
+import { prepareContractCall, toEther, toWei } from 'thirdweb';
+import StaticCont from './StaticCont';
+import { contract } from '../utils/contract';
 type Task = {
 description: string;
 isCompleted: boolean;
