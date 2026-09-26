@@ -8,19 +8,19 @@ const Footer = () => {
       <div style={{ position: 'fixed', bottom: 0, width: '100%', borderTop: '1px solid #1f2937', backgroundColor: 'black', backdropFilter: 'blur(10px)' }}>
         <div style={{ maxWidth: '6xl', margin: '0 auto', padding: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '14px' }}>
           <span style={{ color: '#71717a' }}>
-            Powered by secure blockchain technology
+            RFP.
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', color: '#a1a1aa' }}>
           <a href="#" style={{ color: '#6366f1', transition: 'color 0.3s', textDecoration: 'none' }} >1Cr+ Users</a>
             <a href="#" style={{ color: '#a1a1aa', transition: 'color 0.3s', textDecoration: 'none' }} >Terms</a>
             <a href="#" style={{ color: '#a1a1aa', transition: 'color 0.3s', textDecoration: 'none' }} >Privacy</a>
             <a 
-              href="https://github.com/Aytaditya" 
+              href="https://rfp.3wordpin.com" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: '#a1a1aa', transition: 'color 0.3s', textDecoration: 'none' }}
             >
-              View on GitHub
+              Powered by 3 Word Pin 
             </a>
           </div>
         </div>
